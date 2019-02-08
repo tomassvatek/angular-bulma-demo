@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -16,5 +16,74 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
-</ul>
+</ul> -->
 
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: Free, open source, & modern CSS framework based on Flexbox" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<div class="columns">
+  <div class="column is-3">
+      <aside class="menu">
+          <p class="menu-label">
+            General
+          </p>
+          <ul class="menu-list">
+            <li><a>Dashboard</a></li>
+            <li><a>Customers</a></li>
+          </ul>
+          <p class="menu-label">
+            Administration
+          </p>
+          <ul class="menu-list">
+            <li><a>Team Settings</a></li>
+            <li>
+              <a class="is-active">Manage Your Team</a>
+              <ul>
+                <li><a>Members</a></li>
+                <li><a>Plugins</a></li>
+                <li><a>Add a member</a></li>
+              </ul>
+            </li>
+            <li><a>Invitations</a></li>
+            <li><a>Cloud Storage Environment Settings</a></li>
+            <li><a>Authentication</a></li>
+          </ul>
+          <p class="menu-label">
+            Transactions
+          </p>
+          <ul class="menu-list">
+            <li><a>Payments</a></li>
+            <li><a>Transfers</a></li>
+            <li><a>Balance</a></li>
+          </ul>
+        </aside>
+  </div>
+  <div class="column is-9">
+    <div class="tile is-parent is-warning">
+      <div class="columns">
+      <div class="column">
+          <figure class="image is-128x128">
+              <img src="https://bulma.io/images/placeholders/128x128.png">
+          </figure>
+      </div>
+      <div class="column">
+          <article>
+            <p class="title">Jan Novák</p>
+          </article>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
