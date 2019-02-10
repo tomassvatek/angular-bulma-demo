@@ -1,27 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul> -->
-
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: Free, open source, & modern CSS framework based on Flexbox" width="112" height="28">
+      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: Free, open source, & modern CSS framework based on Flexbox"
+        width="112" height="28" />
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -32,58 +13,53 @@
   </div>
 </nav>
 
+<section class="section">
+  <div class="columns">
+    <div class="column is-3">
+      <app-side-nav></app-side-nav>
+    </div>
+    <div class="column is-9">
+      <div class="hero is-primary">
+        <div class="hero-body">
+          <div class="container is-fluid">
+            <app-hr-information></app-hr-information>
+          </div>
+        </div>
+      </div>
 
-<div class="columns">
-  <div class="column is-3">
-      <aside class="menu">
-          <p class="menu-label">
-            General
+      <section class="section">
+        <div class="columns">
+          <div class="column">
+            <h3 class="title is-3">Languages</h3>
+            <app-activities></app-activities>
+          </div>
+          <div class="column">
+            <h3 class="title is-3">Interviews</h3>
+            <app-interview-list></app-interview-list>
+          </div>
+        </div>
+      </section>
+      <!-- 
+      <section class="section">
+        <div class="container is-fluid">
+          <h3 class="title is-3">Languages</h3>
+          <app-interview-list></app-interview-list>
+        </div>
+      </section> -->
+      <app-create-interview [isActive]="isModalActive"></app-create-interview>
+      <section class="section">
+        <div class="content">
+          <h3 class="title is-3">CV</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, sed. Culpa facilis earum, vero
+            dolores molestias rem sed incidunt delectus ut eligendi quasi omnis, sunt voluptates possimus tempora cum
+            dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quasi nam magni fugit! Cupiditate
+            dicta, asperiores doloribus nostrum id fugiat ea ratione animi velit iusto vero voluptatem ab rem sapiente?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci praesentium perspiciatis ea id sed
+            similique nam, tempore corrupti, consequuntur labore eius mollitia? Culpa iure rerum fugiat recusandae
+            tempora consequatur porro.
           </p>
-          <ul class="menu-list">
-            <li><a>Dashboard</a></li>
-            <li><a>Customers</a></li>
-          </ul>
-          <p class="menu-label">
-            Administration
-          </p>
-          <ul class="menu-list">
-            <li><a>Team Settings</a></li>
-            <li>
-              <a class="is-active">Manage Your Team</a>
-              <ul>
-                <li><a>Members</a></li>
-                <li><a>Plugins</a></li>
-                <li><a>Add a member</a></li>
-              </ul>
-            </li>
-            <li><a>Invitations</a></li>
-            <li><a>Cloud Storage Environment Settings</a></li>
-            <li><a>Authentication</a></li>
-          </ul>
-          <p class="menu-label">
-            Transactions
-          </p>
-          <ul class="menu-list">
-            <li><a>Payments</a></li>
-            <li><a>Transfers</a></li>
-            <li><a>Balance</a></li>
-          </ul>
-        </aside>
-  </div>
-  <div class="column is-9">
-    <div class="tile is-parent is-warning">
-      <div class="columns">
-      <div class="column">
-          <figure class="image is-128x128">
-              <img src="https://bulma.io/images/placeholders/128x128.png">
-          </figure>
-      </div>
-      <div class="column">
-          <article>
-            <p class="title">Jan Novák</p>
-          </article>
-      </div>
-      </div>
+        </div>
+      </section>
     </div>
   </div>
-</div>
+</section>

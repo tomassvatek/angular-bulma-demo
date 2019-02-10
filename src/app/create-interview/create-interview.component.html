@@ -1,0 +1,48 @@
+<div class="modal" [class.is-active]="isActive">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Interview</p>
+      <button (click)="toogleModal()" class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input [ngModel]="interview?.title" (ngModelChange)="interview.title=$event" class="input" type="text" placeholder="Interview Title" name="title">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <input [ngModel]="interview?.date" (ngModelChange)="interview.date=$event" class="input" type="text" placeholder="Interview Date" name="date">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <textarea class="textarea" placeholder="Pros"></textarea>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <textarea class="textarea" placeholder="Cons"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <textarea class="textarea" placeholder="Notes"></textarea>
+        </div>
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success" (click)="handleSaveChanges()">Save changes</button>
+      <button class="button" (click)="toogleModal()">Cancel</button>
+    </footer>
+  </div>
+</div>

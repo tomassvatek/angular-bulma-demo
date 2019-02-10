@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IInterview } from './models/IInterview';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hr-profile-bulma';
+  isModalActive: boolean = true;
+  interviews: IInterview[];
 }
