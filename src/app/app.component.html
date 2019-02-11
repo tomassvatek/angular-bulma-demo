@@ -1,4 +1,4 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
       <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: Free, open source, & modern CSS framework based on Flexbox"
@@ -11,23 +11,72 @@
       <span aria-hidden="true"></span>
     </a>
   </div>
+</nav> -->
+
+<nav class="navbar" role="navigation" aria-label="main navigation" style="margin-bottom: 1rem">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://getbootstrap.com/">
+      <img src="assets/bootstrap-seeklogo.com.svg" alt="Bootstrap" height="50" />
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
 </nav>
 
-<section class="section">
-  <div class="columns">
-    <div class="column is-3">
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-3">
       <app-side-nav></app-side-nav>
     </div>
-    <div class="column is-9">
-      <div class="hero is-primary">
-        <div class="hero-body">
-          <div class="container is-fluid">
-            <app-hr-information></app-hr-information>
+
+    <div class="col-9">
+      <div class="jumbotron">
+        <app-hr-information></app-hr-information>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <h3>Languages</h3>
+          <app-activities></app-activities>
+        </div>
+
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <h3>Interviews</h3>
+            </div>
+            <div class="col">
+              <button (click)="openModal()" class="btn btn-primary">Add Interview</button>
+            </div>
           </div>
+          <app-interview-list [interviews]="interviews"></app-interview-list>
         </div>
       </div>
 
-      <section class="section">
+      <div class="row" style="margin-top:3rem ">
+        <div class="col-12">
+          <h3>CV</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, sed. Culpa facilis earum, vero
+            dolores molestias rem sed incidunt delectus ut eligendi quasi omnis, sunt voluptates possimus tempora cum
+            dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quasi nam magni fugit! Cupiditate
+            dicta, asperiores doloribus nostrum id fugiat ea ratione animi velit iusto vero voluptatem ab rem sapiente?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci praesentium perspiciatis ea id sed
+            similique nam, tempore corrupti, consequuntur labore eius mollitia? Culpa iure rerum fugiat recusandae
+            tempora consequatur porro.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <section class="section">
         <div class="columns">
           <div class="column">
             <h3 class="title is-3">Languages</h3>
@@ -46,13 +95,7 @@
           </div>
         </div>
       </section>
-      <!-- 
-      <section class="section">
-        <div class="container is-fluid">
-          <h3 class="title is-3">Languages</h3>
-          <app-interview-list></app-interview-list>
-        </div>
-      </section> -->
+
       <app-create-interview [isActive]="isModalActive" (createInterview)="onCreateInterview($event)" (cancel)="onCancelButtonClick()"></app-create-interview>
       <app-create-interview [isActive]="isModal2Active" (cancel)="onCancelButtonClick2()"></app-create-interview>
       <section class="section">
@@ -70,4 +113,4 @@
       </section>
     </div>
   </div>
-</section>
+</section>  -->
