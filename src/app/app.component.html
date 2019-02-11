@@ -34,8 +34,15 @@
             <app-activities></app-activities>
           </div>
           <div class="column">
-            <h3 class="title is-3">Interviews</h3>
-            <app-interview-list></app-interview-list>
+            <div class="level">
+              <div class="level-left">
+                <h3 class="title is-3">Interviews</h3>
+              </div>
+              <div class="level-right">
+                <a (click)="openModal()" class="button">Add Interview</a>
+              </div>
+            </div>
+            <app-interview-list [interviews]="interviews"></app-interview-list>
           </div>
         </div>
       </section>
@@ -46,7 +53,8 @@
           <app-interview-list></app-interview-list>
         </div>
       </section> -->
-      <app-create-interview [isActive]="isModalActive"></app-create-interview>
+      <app-create-interview [isActive]="isModalActive" (createInterview)="onCreateInterview($event)" (cancel)="onCancelButtonClick()"></app-create-interview>
+      <app-create-interview [isActive]="isModal2Active" (cancel)="onCancelButtonClick2()"></app-create-interview>
       <section class="section">
         <div class="content">
           <h3 class="title is-3">CV</h3>

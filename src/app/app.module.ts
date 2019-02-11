@@ -7,9 +7,9 @@ import { AppComponent } from './app.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { HrInformationComponent } from './components/hr-information/hr-information.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
-import { InterviewsComponent } from './interviews/interviews.component';
-import { InterviewListComponent } from './interview-list/interview-list.component';
-import { CreateInterviewComponent } from './create-interview/create-interview.component';
+import { InterviewsComponent } from './components/interviews/interviews.component';
+import { InterviewListComponent } from './components/interview-list/interview-list.component';
+import { CreateInterviewComponent } from './components/create-interview/create-interview.component';
 
 @NgModule({
   declarations: [

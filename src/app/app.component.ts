@@ -8,6 +8,25 @@ import { IInterview } from './models/IInterview';
 })
 export class AppComponent {
   title = 'hr-profile-bulma';
-  isModalActive: boolean = true;
-  interviews: IInterview[];
+  isModalActive: boolean = false;
+  isModal2Active: boolean = false;
+  interviews: IInterview[] = [];
+
+  onCreateInterview(interview: IInterview): void {
+    this.interviews.push(interview);
+    this.isModalActive = false;
+  }
+
+  onCancelButtonClick(): void {
+    this.isModalActive = false;
+  }
+
+  // onCancelButtonClick2(): void {
+  //   this.isModal2Active = false;
+  //   this.isModalActive = true;
+  // }
+
+  openModal(): void {
+    this.isModalActive = true;
+  }
 }

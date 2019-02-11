@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IInterview } from '../models/IInterview';
+import { IInterview } from 'src/app/models/IInterview';
 
 @Component({
   selector: 'app-interview',

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IInterview } from '../models/IInterview';
+import { IInterview } from 'src/app/models/IInterview';
 
 @Component({
   selector: 'app-interview-list',
@@ -8,5 +8,4 @@ import { IInterview } from '../models/IInterview';
 })
 export class InterviewListComponent {
   @Input() interviews:IInterview[];
-  
 }

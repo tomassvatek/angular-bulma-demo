@@ -3,7 +3,7 @@
   <div class="modal-card">
     <header class="modal-card-head">
       <p class="modal-card-title">Interview</p>
-      <button (click)="toogleModal()" class="delete" aria-label="close"></button>
+      <button (click)="handleCancelButtonClick()" class="delete" aria-label="close"></button>
     </header>
     <section class="modal-card-body">
       <div class="field is-horizontal">
@@ -24,25 +24,25 @@
         <div class="field-body">
           <div class="field">
             <div class="control">
-              <textarea class="textarea" placeholder="Pros"></textarea>
+              <textarea [ngModel]="interview?.pros" (ngModelChange)="interview.pros=$event" name="pros" class="textarea" placeholder="Pros"></textarea>
             </div>
           </div>
           <div class="field">
             <div class="control">
-              <textarea class="textarea" placeholder="Cons"></textarea>
+              <textarea [ngModel]="interview?.cons" (ngModelChange)="interview.cons=$event" name="cons" class="textarea" placeholder="Cons"></textarea>
             </div>
           </div>
         </div>
       </div>
       <div class="field">
         <div class="control">
-          <textarea class="textarea" placeholder="Notes"></textarea>
+          <textarea [ngModel]="interview?.note" (ngModelChange)="interview.note=$event" class="textarea" placeholder="Notes"></textarea>
         </div>
       </div>
     </section>
     <footer class="modal-card-foot">
       <button class="button is-success" (click)="handleSaveChanges()">Save changes</button>
-      <button class="button" (click)="toogleModal()">Cancel</button>
+      <button class="button" (click)="handleCancelButtonClick()">Cancel</button>
     </footer>
   </div>
 </div>
