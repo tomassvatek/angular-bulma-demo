@@ -24,9 +24,12 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/bulma/css/bulma.min.css"
+              "node_modules/bulma/css/bulma.min.css",
+              "node_modules/bulma-calendar/dist/css/bulma-calendar.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bulma-calendar/dist/js/bulma-calendar.min.js"
+            ]
           },
           "configurations": {
             "production": {

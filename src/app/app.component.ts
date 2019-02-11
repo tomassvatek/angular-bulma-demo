@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IInterview } from './models/IInterview';
 
 @Component({
@@ -6,11 +6,16 @@ import { IInterview } from './models/IInterview';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
   title = 'hr-profile-bulma';
   isModalActive: boolean = false;
   isModal2Active: boolean = false;
   interviews: IInterview[] = [];
+
+  
+  ngOnInit(): void {
+  }
 
   onCreateInterview(interview: IInterview): void {
     this.interviews.push(interview);
